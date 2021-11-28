@@ -1,4 +1,4 @@
-//Copyright by C++_developers1488
+//Copyright by AllMightyWeak
 
 #include "Check.h"
 #include "Time.h"
@@ -13,6 +13,6 @@ int main() {
     if(i>0 and i != 0)
       size.push_back(i);
   }
-  Time inv(_reverse, size);
+  Time inv(_random, size);
   inv.print(std::cout);
 }

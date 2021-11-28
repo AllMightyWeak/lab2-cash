@@ -1,4 +1,4 @@
-//Copyright by C++_developers1488
+//Copyright by AllMightyWeak
 
 #include "Check.h"
 #include <chrono>
@@ -28,6 +28,7 @@ double Check::run() {
   using std::chrono::duration;
   using std::chrono::milliseconds;
   char k = 0;
+  const int x = 1000;
   char* arr = initArray();
   for (int64_t i = 0; i < Check::size; i += 16)
     k = arr[i];
@@ -35,13 +36,13 @@ double Check::run() {
   switch (Check::type)
   {
       case ::_random:
-        for (int j = 0; j < 1000; j++) _random(arr, k);
+        for (int j = 0; j < x; ++j) _random(arr, k);
         break;
       case ::_forward:
-        for (int j = 0; j < 1000; j++) _forward(arr, k);
+        for (int j = 0; j < x; ++j) _forward(arr, k);
         break;
       case ::_reverse:
-        for (int j = 0; j < 1000; j++) _reverse(arr, k);
+        for (int j = 0; j < x; ++j) _reverse(arr, k);
         break;
   }
   auto t2 = std::chrono::high_resolution_clock::now();
